@@ -1,0 +1,552 @@
+/* ==================== PICT優勢頁面樣式 ==================== */
+
+/* Hero區域 */
+.pict-hero {
+    margin-top: 70px;
+    background:
+        radial-gradient(circle at top left, rgba(148, 163, 184, 0.3), transparent 55%),
+        linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: white;
+    padding: 96px 0 88px;
+    text-align: center;
+}
+
+.pict-hero-content h1 {
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 22px;
+    letter-spacing: 0.06em;
+}
+
+.pict-hero-content p {
+    font-size: 19px;
+    opacity: 0.96;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* 引入區域 */
+.pict-intro {
+    padding: 72px 0 76px;
+    background: #f9fafb;
+}
+
+.intro-box {
+    background: white;
+    padding: 40px 44px;
+    border-radius: 18px;
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+.intro-box p {
+    font-size: 17px;
+    color: var(--text-light);
+    margin-bottom: 14px;
+    line-height: 1.9;
+}
+
+.intro-box p strong {
+    color: var(--text);
+    font-weight: 700;
+}
+
+/* 核心優勢區域 */
+.pict-advantages {
+    padding: 88px 0 92px;
+    background: radial-gradient(circle at top, #eef4ff 0, #f9fafb 52%, #eef2ff 100%);
+}
+
+.pict-advantages h2 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--text);
+}
+
+.advantages-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.advantage-card {
+    background: white;
+    padding: 24px 26px;
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+}
+
+.advantage-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 45px rgba(15, 23, 42, 0.14);
+}
+
+.advantage-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 55%);
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+}
+
+.advantage-card:hover::before {
+    opacity: 1;
+}
+
+.advantage-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(145deg, var(--secondary-color), #1d4ed8);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 26px;
+}
+
+.advantage-card h3 {
+    font-size: 23px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+    letter-spacing: 0.03em;
+}
+
+.advantage-card p {
+    font-size: 17px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+.advantage-list {
+    list-style: none;
+    margin: 8px 0 8px;
+    padding-left: 0;
+}
+
+.advantage-list li {
+    padding: 8px 0;
+    padding-left: 30px;
+    position: relative;
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.advantage-list li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.advantage-note {
+    background: rgba(37, 99, 235, 0.06);
+    padding: 10px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(37, 99, 235, 0.18);
+    font-size: 14px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-align: left;
+}
+
+.advantage-content {
+    flex: 1;
+}
+
+.advantage-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* 長期實證案例 */
+.pict-cases {
+    padding: 80px 0;
+    background: white;
+}
+
+.pict-cases h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--text);
+}
+
+.cases-intro {
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-light);
+    margin-bottom: 50px;
+}
+
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.case-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.case-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.case-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #f9fafb;
+}
+
+.case-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
+    display: block;
+}
+
+.case-content {
+    padding: 30px;
+}
+
+.case-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+.case-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    gap: 10px;
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--secondary-color);
+    min-width: 80px;
+}
+
+.info-value {
+    color: var(--text-light);
+}
+
+.case-result {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.6;
+    padding: 15px;
+    background: rgba(37, 99, 235, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid var(--secondary-color);
+}
+
+.cases-note {
+    text-align: center;
+    font-size: 17px;
+    color: var(--secondary-color);
+    padding: 22px 24px;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(6, 182, 212, 0.06));
+    border-radius: 999px;
+    border: 1px solid rgba(37, 99, 235, 0.22);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.cases-note strong {
+    color: var(--secondary-color);
+}
+
+/* 技術規格 */
+.pict-specs {
+    padding: 80px 0;
+    background: #f9fafb;
+}
+
+.pict-specs h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--text);
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.spec-item {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.spec-item h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.spec-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.spec-list li {
+    padding: 10px 0;
+    padding-left: 30px;
+    position: relative;
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.spec-list li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: 700;
+}
+
+/* 為什麼選擇PICT */
+.why-pict {
+    padding: 90px 0 100px;
+    background: radial-gradient(circle at top, #eef4ff 0, #f9fafb 45%, #ffffff 100%);
+}
+
+.why-pict h2 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 18px;
+    color: var(--text);
+    letter-spacing: 0.06em;
+}
+
+.why-intro {
+    text-align: center;
+    font-size: 17px;
+    color: var(--text-light);
+    margin-bottom: 52px;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.9;
+}
+
+.why-intro strong {
+    color: var(--text);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+.why-item {
+    background: white;
+    padding: 32px 34px;
+    border-radius: 18px;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.09);
+    position: relative;
+    overflow: hidden;
+}
+
+.why-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(6, 182, 212, 0.06));
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+}
+
+.why-item:hover::before {
+    opacity: 1;
+}
+
+.why-item::after {
+    content: attr(data-label);
+    position: absolute;
+    top: 18px;
+    right: 26px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(148, 163, 184, 0.9);
+}
+
+.why-item h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.why-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.why-list li {
+    padding: 10px 0;
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.why-conclusion {
+    text-align: center;
+    font-size: 18px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    padding: 30px;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 12px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+/* 結語區域 */
+.pict-conclusion {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.pict-conclusion h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.pict-conclusion p {
+    font-size: 18px;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .pict-hero-content h1 {
+        font-size: 32px;
+    }
+
+    .pict-advantages h2,
+    .pict-cases h2,
+    .pict-specs h2,
+    .why-pict h2 {
+        font-size: 28px;
+    }
+
+    .advantages-grid {
+        gap: 18px;
+    }
+
+    .advantage-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pict-conclusion h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pict-hero {
+        padding: 60px 0;
+    }
+
+    .pict-hero-content h1 {
+        font-size: 24px;
+    }
+
+    .pict-advantages,
+    .pict-cases,
+    .pict-specs,
+    .why-pict,
+    .pict-conclusion {
+        padding: 40px 0;
+    }
+
+    .advantage-card,
+    .case-card,
+    .spec-item,
+    .why-item {
+        padding: 20px;
+    }
+
+    .pict-advantages h2,
+    .pict-cases h2,
+    .pict-specs h2,
+    .why-pict h2 {
+        font-size: 22px;
+    }
+
+    .pict-conclusion h2 {
+        font-size: 24px;
+    }
+
+    .pict-conclusion p {
+        font-size: 16px;
+    }
+}
